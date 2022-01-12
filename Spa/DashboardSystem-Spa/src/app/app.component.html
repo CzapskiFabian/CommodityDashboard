@@ -1,0 +1,17 @@
+
+<mat-toolbar color="primary" class="toolbar">
+  <div class="toolbar-tools">
+    <div class="filler"></div>
+  </div>
+   <app-login></app-login>
+</mat-toolbar>
+
+<mat-sidenav-container class="main">
+  <mat-sidenav mode="side" opened class="sidenav">
+    <app-dashboard-list></app-dashboard-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container> 

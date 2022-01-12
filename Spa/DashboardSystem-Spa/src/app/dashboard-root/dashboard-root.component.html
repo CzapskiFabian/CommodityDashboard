@@ -1,0 +1,3 @@
+<span *ngIf="dashboard$ | async as dashboard">
+  <app-container [config]="dashboard.templateJson.config"></app-container>
+</span>

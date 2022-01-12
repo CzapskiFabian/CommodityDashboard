@@ -1,0 +1,24 @@
+<mat-card *ngIf="modelCommodity$ | async as modelCommodity">
+  <mat-card-title
+    ><span class="font-primary">{{modelCommodity.modelName}} </span
+    ><span class="font-secondary">{{modelCommodity.commodityName}}</span></mat-card-title
+  >
+  <mat-list role="list" class="list">
+    <mat-list-item role="listitem"
+      ><span class="listitem-title">Date</span
+      ><span class="listitem-value">{{modelCommodity.date | date}}</span></mat-list-item
+    >
+    <mat-list-item role="listitem"
+    ><span class="listitem-title">Position</span
+    ><span class="listitem-value">{{modelCommodity.position}}</span></mat-list-item
+  >
+    <mat-list-item role="listitem"
+      ><span class="listitem-title">Price</span
+      ><span class="listitem-value">{{modelCommodity.price}}</span></mat-list-item
+    >
+    <mat-list-item role="listitem"
+      ><span class="listitem-title">Pnl Daily</span
+      ><span class="listitem-value">{{modelCommodity.pnlDaily}}</span></mat-list-item
+    >
+  </mat-list>
+</mat-card>

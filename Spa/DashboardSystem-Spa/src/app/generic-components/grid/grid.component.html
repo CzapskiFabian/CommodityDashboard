@@ -1,0 +1,42 @@
+<kendo-grid
+  [data]="(gridItems | async)!"
+  [pageSize]="state.take!"
+  [skip]="state.skip!"
+  [pageable]="true"
+  [filter]="state.filter!"
+  [filterable]="true"
+  (dataStateChange)="dataStateChange($event)"
+  (pageChange)="pageChange($event)"
+  [height]="400"
+>
+  <kendo-grid-column field="modelName" title="Model">
+    <ng-template kendoGridFilterCellTemplate let-filter let-column="column">
+      <kendo-grid-string-filter-cell
+        [column]="column"
+        [filter]="filter"
+        operator="contains"
+      >
+        <kendo-filter-contains-operator></kendo-filter-contains-operator>
+      </kendo-grid-string-filter-cell>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="commodityName" title="Commodity">
+    <ng-template kendoGridFilterCellTemplate let-filter let-column="column">
+      <kendo-grid-string-filter-cell
+        [column]="column"
+        [filter]="filter"
+        operator="contains"
+      >
+        <kendo-filter-contains-operator></kendo-filter-contains-operator>
+      </kendo-grid-string-filter-cell>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="date" title="Date" [filterable]="false">
+  </kendo-grid-column>
+  <kendo-grid-column
+    field="newTradeAction"
+    title="NewTradeAction"
+    [filterable]="false"
+  >
+  </kendo-grid-column>
+</kendo-grid>

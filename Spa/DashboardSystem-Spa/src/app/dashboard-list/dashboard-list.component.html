@@ -1,0 +1,9 @@
+<mat-nav-list *ngIf="dashboardStore.dashboards$ | async as dashboards">
+  <mat-list-item
+    *ngFor="let dashboard of dashboards"
+    [routerLink]="['/dashboards', dashboard.dashboardId]"
+    [routerLinkActive]="['is-active']"
+  >
+    <a class="sidenav-list-item">{{ dashboard.name }}</a>
+  </mat-list-item>
+</mat-nav-list>
