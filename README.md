@@ -15,4 +15,3 @@ Run the SPA:
 2. run npm start from .\Spa\DashboardSystem-Spa
 3. Browse to http://localhost:4200/
 
-Enjoy!
